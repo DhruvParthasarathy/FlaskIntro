@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center;">Update Task</h1>
+
+    <form action="/update/{{task.id}}" method="POST">
+        <!-- When the / post method is hit, we can access the value of 
+        the content input field by using request.form['content'] -->
+        <input value="{{task.content}}" type="text" name="content" id="content">
+        <input type="submit" value="Update Task">
+    </form>
+</div>
+{% endblock %}
